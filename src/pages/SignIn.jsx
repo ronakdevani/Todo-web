@@ -99,7 +99,7 @@ const SignIn = () => {
               </div>
             </div>
             <div className="flex justify-end text-[#7289DA]">
-              <Link to="/reset">Forgot Password</Link>
+              <Link to="/reset">Forgot</Link>
             </div>
             <button
               type="submit"
