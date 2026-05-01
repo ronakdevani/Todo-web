@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+@theme {
+  --font-roboto: "Roboto Slab", serif;
+}
+
+* {
+  scrollbar-width: none;
+}
+
+body {
+  background: url(../public/images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(20px);
+  filter: grayscale(0.4);
+}
+.main {
+  background-color: rgba(195, 236, 191, 0.377);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  padding: 30px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-align: center;
+  min-width: 1300px;
+}
+.ul {
+  min-width: 1000px;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(50px);
+  padding: 20px;
+  font-weight: bold;
+  margin-top: 40px;
+  padding-left: 40px;
+  transform: translateX(-40px);
+  border-radius: 20px;
+  @apply translate-x-10 text-3xl font-roboto font-semibold capitalize;
+}
+
+.heading {
+  @apply flex items-center justify-center;
+}
+h1 {
+  @apply text-6xl font-bold font-roboto text-white leading-20 tracking-[7px];
+}
+.length {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  @apply w-50 h-50 bg-white rounded-full flex justify-center items-center text-3xl font-roboto font-medium translate-x-30;
+}
+.input {
+  @apply outline-none border-[5px] border-black focus:border-white duration-300 w-180 h-20 text-center font-roboto text-3xl font-semibold text-white rounded-2xl mt-10;
+}
+.editInput{
+  @apply outline-none border-b-[5px] border-black focus:border-b-white duration-300 w-180 h-14 font-roboto text-3xl font-semibold text-green-500
+}
+.button {
+  @apply px-10 py-5 bg-black text-white font-roboto text-3xl font-semibold rounded-2xl cursor-pointer hover:bg-white hover:text-black border-[5px] border-black duration-300 mx-2;
+}
+
+li {
+  @apply my-2 min-w-200 flex justify-between items-center;
+}
+.btn {
+  @apply px-7 py-3.5 text-xl mx-1 bg-black text-white font-roboto font-semibold rounded-2xl cursor-pointer hover:bg-white hover:text-black  border-[5px] border-black duration-300;
+}
+form {
+  @apply relative;
+}
+
+input::placeholder{
+  @apply text-red-500 text-2xl
+}
+
+.profile:hover .username{
+  overflow: visible;
+  opacity: 1;
+  @apply translate-x-0 capitalize
+}
+
+.updateInput::placeholder{
+  font-size: 14px;
+}
+
+/* From Uiverse.io by LightAndy1 */ 
+.signin {
+  float: right;
+  max-width: 320px;
+  display: flex;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  gap: 0.75rem;
+  color: #c4d2dc;
+  background-color: #19242b;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0, 0.87, 0.12, 1);
+}
+
+.signin:hover {
+  transform: scale(1.025);
+}
+
+.signin:active {
+  transform: scale(0.975);
+}
+
+button svg {
+  height: 24px;
+  width: auto;
+}
+.facebook{
+  background: transparent;
+  position: relative;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #0163E0;
+  border-radius: 25px;
+  outline: none;
+  overflow: hidden;
+  color: #0163E0;
+  transition: color 0.3s 0.1s ease-out;
+  text-align: center;
+}
+
+.facebook svg {
+  fill: #0163E0;
+  height: 25px;
+  width: 25px;
+}
+
+.facebook span {
+  margin: 10px;
+}
+
+.facebook::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  content: '';
+  border-radius: 50%;
+  display: block;
+  width: 20em;
+  height: 20em;
+  left: -5em;
+  text-align: center;
+  transition: box-shadow 0.5s ease-out;
+  z-index: -1;
+}
+
+.facebook:hover {
+  color: #fff;
+  border: 1px solid #0163E0;
+}
+
+.facebook:hover svg {
+  fill: currentColor;
+}
+
+.facebook:hover::before {
+  box-shadow: inset 0 0 0 10em #0163E0;
+}
